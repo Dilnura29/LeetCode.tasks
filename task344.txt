@@ -1,0 +1,18 @@
+
+
+function reverseString(s: string[]): void
+{
+    // h e l  o =>
+    let ch : string = "";
+    let n : number = Math.floor(s.length / 2);
+    for(let i : number = 0; i < n; i++)
+    {
+        ch = s[i];
+        s[i] = s[s.length - 1 - i];
+        s[s.length - 1 - i] = ch;
+    }
+};
+
+
+let s : string[] = ['w', 'e', 'l', 'c', 'o', 'm', 'e'];
+reverseString(s);

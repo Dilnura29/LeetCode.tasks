@@ -1,0 +1,32 @@
+function firstUniqChar(s: string): number
+{
+
+    let checked : string[] = [];
+    for(let i : number = 0; i < s.length; i++)
+    {
+        if(checked.includes(s[i]))
+        {
+            continue;
+        }
+        let sanoq : number = 0;
+        for(let j : number = 0; j < s.length; j++)
+        {
+            if(s[i] == s[j])
+            {
+                ++sanoq;
+            }
+        }
+
+        if(sanoq == 1)
+        {
+            return i;
+        }
+        else
+        {
+            checked.push(s[i]);
+        }
+    }
+
+    return -1;
+
+};

@@ -1,0 +1,26 @@
+
+
+function findTheDifference(s: string, t: string): string
+{
+    // anagram   // davay vay
+    // nagaram
+    let arr1: string[] = s.split('');
+    let arr2: string[] = t.split('');
+
+    for(let i : number = 0; i < arr1.length; i++)
+    {
+        let index : number = arr2.indexOf(arr1[i]);
+        if(index == -1)
+        {
+            break;
+        }
+
+        arr2.splice(index, 1);
+        if(arr2.length == 1)
+        {
+            break;
+        }
+    }
+
+    return arr2[0];
+};

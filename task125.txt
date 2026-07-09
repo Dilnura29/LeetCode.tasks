@@ -1,0 +1,23 @@
+
+
+function isPalindrome(s: string): boolean
+{
+    // "A man, a plan, a canal: Panama"
+    // amanaplanacanalpanama
+    //
+    let s1 : string = "";
+    let s2 : string = "";
+
+    s = s.toLowerCase();
+
+    for(let i : number = 0; i < s.length; ++i)
+    {
+        if('a' <= s[i] && s[i] <= 'z' || '0' <= s[i] && s[i] <= '9')
+        {
+            s1 += s[i];
+            s2 = s[i] + s2;
+        }
+    }
+
+    return s1 == s2;
+};

@@ -1,0 +1,19 @@
+
+
+function strStr(haystack: string, needle: string): number
+{
+    let index : number = -1;
+    let nusxa : string = "";
+
+    for(let i : number = 0; i < haystack.length; i++)
+    {
+        nusxa  = haystack.slice(i, i + needle.length);
+        if(nusxa == needle)
+        {
+            index = i;
+            break;
+        }
+    }
+
+    return index;
+};
