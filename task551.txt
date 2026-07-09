@@ -1,0 +1,13 @@
+function checkRecord(s: string): boolean
+{
+    let A1 : number = s.indexOf("A");
+    let A2 : number = s.lastIndexOf("A");
+    let LLL : number = s.indexOf("LLL");
+
+    if(A1 == A2 && LLL == -1)
+    {
+        return true;
+    }
+
+    return false;
+};

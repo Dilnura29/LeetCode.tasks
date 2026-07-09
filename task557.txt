@@ -1,0 +1,27 @@
+
+function teskari(s : string) : string
+{
+    let s1 : string = "";
+    for(let i : number = 0; i < s.length; i++)
+    {
+        s1 = s[i] + s1;
+    }
+    
+    return s1;
+}
+
+function reverseWords(s: string): string 
+{
+    // salom nma gap => molas amn pag
+    
+    let words : string[] = s.split(' ');
+    let res : string = "";
+    for(let i : number = 0; i < words.length; i++)
+    {
+        words[i] = teskari(words[i]);
+        res += words[i] + " ";
+    }
+    
+    return res.trim();
+    
+};
